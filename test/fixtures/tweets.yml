@@ -2,6 +2,10 @@
 
 one:
   content: MyString
+  sentfrom: MyString
+  user: one
 
 two:
   content: MyString
+  sentfrom: MyString
+  user: two

@@ -7,8 +7,9 @@ require 'simplecov'
 require 'simplecov-console'
 
 
+
 # Capybara.app = ApplicationController
-Capybara.server_port = 10000
+Capybara.server_port = 3000
 
 # To ensure that browser tests can find the test server process,
 # always include the port number in URLs.
@@ -27,6 +28,7 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   # SimpleCov::Formatter::HTMLFormatter
 ])
 SimpleCov.start
+
 
 RSpec.configure do |config|
   config.after(:suite) do

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body>
+
+<div class="home-heading">
+<h1> Welcome To The Internet </h1>
+</div>
+
+<% @news.each{|tweet| %> <%= tweet.content %><% }%>
+
+</body>
+</html>
