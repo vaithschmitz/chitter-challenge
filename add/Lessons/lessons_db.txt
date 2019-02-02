@@ -8,12 +8,6 @@ Rails PostgreSQL Setup:
 	- In db/migrate/my_file, add null: false to ensure no empty values 
 		-> t.string, null: false
 
-
-Rails RSpec Setup:
-(https://www.youtube.com/watch?v=AQ-Vf157Ju8)
-	- Use gem 'rspec-rails' -> bundle install
-	- instead of rspec init, rails uses generate syntax -> "rails g rspec:install"
-
 Relationships between tables pt1 (intro):
 	- 1-1 A value from table A corresponds ONLY to a value from table B and vice versa
 		-> A person has only one passport number and the pass number corresponds to only one person

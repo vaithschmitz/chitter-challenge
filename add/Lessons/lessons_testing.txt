@@ -1,0 +1,7 @@
+Rails RSpec Setup:
+(https://www.youtube.com/watch?v=AQ-Vf157Ju8)
+	- Use gem 'rspec-rails' -> bundle install
+	- instead of rspec init, rails uses generate syntax -> "rails g rspec:install"
+
+Testing Database:
+	- "rake db:test:prepare" clones db of current env to env test
