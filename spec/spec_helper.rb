@@ -1,12 +1,24 @@
 ENV['RACK_ENV'] = 'test'
-require File.join(File.dirname(__FILE__), '../app/controllers', 'application_controller.rb')
+# require File.join(File.dirname(__FILE__), '../app/controllers', 'application_controller.rb')
+require File.expand_path("../../config/environment", __FILE__)
+require 'rspec/rails'
 require 'capybara'
-require 'capybara/rspec'
-require 'rspec'
 require 'simplecov'
 require 'simplecov-console'
 
-Capybara.app = ApplicationController
+
+# Capybara.app = ApplicationController
+Capybara.server_port = 10000
+
+# To ensure that browser tests can find the test server process,
+# always include the port number in URLs.
+Capybara.always_include_port = true
+
+# For all tests except Javascript tests we will use :rack_test
+# (the default) as it is the fastest. For Javascript tests we will
+# use Selenium as it is the most robust/mature browser driver
+# available.
+Capybara.javascript_driver = :selenium
 
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
@@ -105,3 +117,4 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
+

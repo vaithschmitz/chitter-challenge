@@ -1,0 +1,6 @@
+Generate controllers + views + test with "rails g controller controller_name_plural"
+
+Controllers inherit from ApplicationController
+
+Controller actions:
+	- 

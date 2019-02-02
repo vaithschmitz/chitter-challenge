@@ -1,0 +1,15 @@
+In config/routes:
+	- get '/' => 'pages#index'
+			this is short for 
+		get '/', controller: 'pages', action: 'index'
+
+In app/controllers/my_controller
+	- controller inherits from ApplicationController
+	- has different methods:
+		- render:
+			-> def index 
+					 render 'pages/page_name'
+				 end
+
+In app views/my_controller
+	- Create new html.erb to be consumed by controller

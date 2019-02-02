@@ -6,6 +6,7 @@ ruby '2.6.0'
 
 gem 'rake'
 gem 'rubocop', '0.56.0'
+gem 'chromedriver-helper'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
@@ -60,7 +61,6 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
-  # Gems from original Sinatra repo
   gem 'rspec-rails'
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false

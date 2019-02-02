@@ -1,0 +1,2 @@
+
+Unlike requiring the controller (Sinatra), you require config/environment.rb in your spec_helper. config/environment.rb loads application.rb which initializes Rails through application.rb and in turn is required by config.ru to build the app. 
