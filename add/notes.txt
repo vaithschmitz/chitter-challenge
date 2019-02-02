@@ -1,0 +1,16 @@
+max username = 15 (actual twitter limitations)
+max pw = 15
+max content = 140 (old twitter limit)
+
+inc UTF-8 for emoji support! html head -> <meta charset="UTF-8">
+
+advanced functs:
+	- list all tweets by user
+	- reply to tweet
+	- retweet
+	- search tweets (all/user) by keyword
+
+set/show timezone in psql
+	
+	-> SHOW timezone;
+	-> SET timezone = 'America/Los_Angeles';

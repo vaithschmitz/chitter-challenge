@@ -1,0 +1,40 @@
+Rails PostgreSQL Setup:
+	- Create db connection when creating app -> "rails new my_app database=postgresql"
+	- Add gems -> bundle install
+	- Run task for creating db with "rake db:create" (will create db for dev + test env -> see /bin)
+	- set up table -> "rails g Model tablename column1:datatype column2:datatype" etc. (if no type specified rails assumes it's str)
+	- create db migrations (link to db) -> "rake db:migrate" 
+	- table connected to model will automatically have plural name of model. eg. "rails g scaffold user column1..." will create model+view user + table userS
+	- In db/migrate/my_file, add null: false to ensure no empty values 
+		-> t.string, null: false
+
+
+Rails RSpec Setup:
+(https://www.youtube.com/watch?v=AQ-Vf157Ju8)
+	- Use gem 'rspec-rails' -> bundle install
+	- instead of rspec init, rails uses generate syntax -> "rails g rspec:install"
+
+Relationships between tables pt1 (intro):
+	- 1-1 A value from table A corresponds ONLY to a value from table B and vice versa
+		-> A person has only one passport number and the pass number corresponds to only one person
+	- 1-n A value from table a corresponds to multiple in table B but not vice versa
+		-> A person has only one birthdate, but multiple people can have the same birthdate
+	- n-n Multiple corresponding values 
+		-> A chair is furniture and an object to sit on, but furniture and seats also includes sofas etc.
+
+Relationships between tables pt2 (setup):
+(https://www.youtube.com/watch?v=DAjfsW4gqGo)
+	- Create multiple tables
+		-> Model 1 -> "rails g model User username email password"
+		-> Model 2 -> "rails g model Tweet content"
+	- In migrate file for tweet, table gets created by iteration, add:
+		-> t.belongs_to :user (this references the id of user in table userS)
+	- Next, run "rake db:create" to create db  
+	- Finally, run "rake db:migrate" to create tables
+	- Tables have been connected in db/schema
+	- In model user add:
+		-> has_many :tweets (-> plural b/c it's has_many)
+		Optional:
+		-> has_many :tweets, dependent: :destroy (when user gets deleted, so do all tweets)
+	- In model tweet add:
+		-> belongs_to :user
