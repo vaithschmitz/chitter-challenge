@@ -2,7 +2,7 @@ require 'active_record'
 class User < ActiveRecord::Base
   has_many :tweets
   
-  def con
+  def self.con
     if ENV['RACK_ENV'] == 'test'
       establish_connection(:adapter => "postgresql", :database => "chitter_test")
     else

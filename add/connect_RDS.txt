@@ -1,0 +1,10 @@
+psql \
+   --host=<DB instance endpoint> \
+   --port=<port> \
+   --username=<master user name> \
+   --password \
+   --dbname=<database name> 
+
+   Host: 
+   mydbinstance.czqxni6orpo1.us-east-2.rds.amazonaws.com
+   5432
