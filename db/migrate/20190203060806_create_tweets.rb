@@ -3,6 +3,7 @@ class CreateTweets < ActiveRecord::Migration[5.2]
     create_table :tweets do |t|
       t.string :content
       t.string :sentfrom
+      t.string :username
       t.references :user, foreign_key: true
 
       t.timestamps
@@ -10,3 +11,7 @@ class CreateTweets < ActiveRecord::Migration[5.2]
     add_index :tweets, :sentfrom
   end
 end
+
+
+
+

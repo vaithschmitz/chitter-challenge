@@ -7,3 +7,7 @@ Unlike requiring the controller (Sinatra), you require config/environment.rb in 
 
 Testing Database:
 	- "rake db:test:prepare" clones db of current env to env test
+
+Capy: 
+	- Check for a set number of occurences on page
+		-> expect(page).to have_content("content", count: 2)

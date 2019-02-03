@@ -2,14 +2,37 @@
 <html>
 <head>
 	<title>Home</title>
+	<%= stylesheet_link_tag src="pages" %>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-<div class="home-heading">
-<h1> Welcome To The Internet </h1>
+<main class="grid1">
+
+					<div class="home-heading"><h1 class="welcome"> Welcome To The Internet</h1> </div>
+
+<div class="user_id"> <% @five_tweets.each{|t| %><p class="username"> <%= t.username;%></p> </div>
+								
+								<div class="chittered"><p class="textchit"> chittered</p> </div> 
+
+<div class="tweet"><p class="textweet"><i>« <%=t.content %> »</i></p> </div>
+<div class="empty1"></div>  <div class="empty2"></div>  <div class="time"> <strong class="timetext"><%=t.time.strftime("%l:%M%P")%></strong><% }%></div>
+</main>
+
+<!-- 
+<main grid2>
+<div id="home_form"> 
+	<div class="headline">
+	<form> <h2>Be Part Of The Conversation</h2>
+	</div>
+			<br>
+	<div class="clickme">	<button name="submit" type="submit" value="Join The Chit"></button>
+			<br>
+		<h3 class="midtext"> Tell Me More... </h3></div>
+	</form>
 </div>
+</main>
 
-<% @news.each{|tweet| %> <%= tweet.content %><% }%>
-
+ -->
 </body>
 </html>

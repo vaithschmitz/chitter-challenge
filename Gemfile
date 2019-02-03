@@ -9,6 +9,10 @@ gem 'rubocop', '0.56.0'
 gem 'activerecord'
 gem 'chromedriver-helper'
 
+group :features do
+  gem 'geoip'
+end
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
 # Use postgresql as the database for Active Record

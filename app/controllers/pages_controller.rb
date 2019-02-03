@@ -4,8 +4,7 @@ class PagesController < ApplicationController
   end
 
   def show
-    @news = Tweet.recent
+    @five_tweets = Tweet.five_random
     render 'pages/home'
   end
-
 end
