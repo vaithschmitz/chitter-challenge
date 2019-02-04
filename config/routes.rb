@@ -4,7 +4,7 @@ get '/' => 'pages#index'
 
 get '/home' => 'pages#show'
 
-# get '/signup' => 
+get '/sign_up' => 'authentication#create'
 
 # get '/signon' => 
 

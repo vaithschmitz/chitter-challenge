@@ -1,0 +1,2 @@
+Use services for external calls 
+	-> able to reuse them all over

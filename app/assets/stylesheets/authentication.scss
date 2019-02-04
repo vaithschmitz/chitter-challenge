@@ -1,3 +1,32 @@
-// Place all the styles related to the authentication controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+	width: 80vw;
+	height: 80vh;
+	overflow: hidden;
+}
+
+.gridcontainer {
+	display: grid;
+	grid-template-columns: 15vmax 15vmax 15vmax 15vmax 15vmax;
+	grid-template-rows: 15vmax 15vmax 15vmax 15vmax 15vmax;
+}
+
+.gridbox1 {
+	background-color: blue;
+}
+
+.gridbox2 {
+	background-color: orange;
+}
+
+.gridbox3 {
+	background-color: blue;
+}
+
+.gridbox4 {
+	background-color: orange;
+}
+
+.gridbox5 {
+	background-color: blue;
+}
+

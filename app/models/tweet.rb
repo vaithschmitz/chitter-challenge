@@ -22,9 +22,10 @@ class Tweet < ActiveRecord::Base
     Tweet.order("RANDOM()").limit(5)
   end
 
-    def self.reconnect!
-        clear_cache!
-        reset_transaction
-    end
+  def self.peeps
+    self.con
+    Tweet.table_name = "mock_tweets"
+    Tweet.select("username, sent_from, content").limit(10)
 end
 
+end

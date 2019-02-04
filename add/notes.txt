@@ -14,3 +14,5 @@ set/show timezone in psql
 	
 	-> SHOW timezone;
 	-> SET timezone = 'America/Los_Angeles';
+
+Scheduler that pulls real Tweets from API every 30 or so minutes

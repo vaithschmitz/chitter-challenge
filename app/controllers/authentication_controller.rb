@@ -15,9 +15,7 @@ class AuthenticationController < ApplicationController
   end
 
   def create
-    respond_with @authenticate
-    @signup = SignUp.new()
-    render 'authentication/sign_in'
+    render 'authentication/sign_up'
   end
 
   def reset

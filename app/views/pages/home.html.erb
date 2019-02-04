@@ -7,32 +7,49 @@
 </head>
 <body>
 
+
+<!-- <% @five_tweets.each{|t| %><p class="username"> <%= t.username;%><%}%> -->
+
 <main class="grid1">
 
-					<div class="home-heading"><h1 class="welcome"> Welcome To The Internet</h1> </div>
+					<div class="home-heading"><h1 class="welcome"> Welcome To The Internet</h1> </div> 
 
-<div class="user_id"> <% @five_tweets.each{|t| %><p class="username"> <%= t.username;%></p> </div>
+
+					<div class="topright"></p>
+						
+					<h1 class="chittext"> Chitter </h1>  </div>
+					
+					<div class="chittered"></div> 
+
+<div class="user_id">  </div>
 								
-								<div class="chittered"><p class="textchit"> chittered</p> </div> 
+								
 
-<div class="tweet"><p class="textweet"><i>« <%=t.content %> »</i></p> </div>
-<div class="empty1"></div>  <div class="empty2"></div>  <div class="time"> <strong class="timetext"><%=t.time.strftime("%l:%M%P")%></strong><% }%></div>
+<div class="tweet"> <p class="textweet"> <i> <%@five_tweets.each{|t| %>«<%= t.content %>»<%}%> </i> </p> </div>
+
+<div class="center"></div>
+
+<div class="empty1"></div>  <div class="empty2"></div> 
+
+ <div class="time"> <div class="location"> <%@five_tweets.each{|t| %><%=t.sent_from %><%}%></div> 
+ 	<div class="timetext"> <%@five_tweets.each{|t| %><%= t.time.strftime("%l  :  %M  %P")%><%}%></strong></div>
 </main>
 
 <!-- 
-<main grid2>
-<div id="home_form"> 
-	<div class="headline">
-	<form> <h2>Be Part Of The Conversation</h2>
-	</div>
-			<br>
-	<div class="clickme">	<button name="submit" type="submit" value="Join The Chit"></button>
-			<br>
-		<h3 class="midtext"> Tell Me More... </h3></div>
-	</form>
-</div>
-</main>
+# <main grid2>
+# <div id="home_form"> 
+# 	<div class="headline">
+# 	<form> <h2>Be Part Of The Conversation</h2>
+# 	</div>
+# 			<br>
+# 	<div class="clickme">	<button name="submit" type="submit" value="Join The Chit"></button>
+# 			<br>
+# 		<h3 class="midtext"> Tell Me More... </h3></div>
+# 	</form>
+# </div>
+# </main>
 
+#  -->
+<!-- # </body>
+# </html>
  -->
-</body>
-</html>

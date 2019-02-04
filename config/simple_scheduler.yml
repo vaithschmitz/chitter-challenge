@@ -1,0 +1,23 @@
+# Fetch Weather
+simple_task:
+  class: "SomeActiveJob"
+  every: "15.minutes"
+
+# Fetch Twitter
+twenty_task:
+  class: "TwentyTask"
+  every: "20.minutes"
+  at: "*:15"
+
+# Fetch News
+thirty_task:
+  class: "ThirtyTask"
+  every: "30.minutes"
+  at: "*:30"
+
+# Fetch Daily Highlights
+daily_task:
+  class: "WeeklyJob"
+  every: "1.day"
+  at: "18:00"
+  tz: "UnitedKingdom/London"

@@ -10,7 +10,8 @@ gem 'activerecord'
 gem 'chromedriver-helper'
 
 group :features do
-  gem 'geoip'
+  gem "simple_scheduler"
+  gem 'httparty'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

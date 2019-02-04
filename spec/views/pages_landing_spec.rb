@@ -8,9 +8,4 @@ feature "Landing Page" do
     visit '/'
     expect(page).to have_content('Welcome')
   end
-  scenario "User chooses number of tweets shown" do
-    visit '/'
-    fill_in 'number', with: 100
-    expect(page).to have_content("pass", count: 100)
-  end
 end
